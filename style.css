@@ -1,0 +1,114 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+.container, .card-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.header {
+    padding: 15px 0;
+    box-shadow: 0px 0px 10px #cacaca;
+}
+.header .container{
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 27px;
+}
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+.menu-list a {
+    color: #00b9ff;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 16px;
+    border: 2px solid #00B9ff;
+    margin-right: 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    display: block;
+}
+
+.menu-list:last-child a{
+    margin-right: 0
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+}
+.cards {
+    width: 33.33%;
+    margin: 15px;
+    box-shadow: 0px 0px 10px #d4d4d4;
+    padding: 10px;
+    position: relative;
+    border-radius: 10px;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.card1:before {
+    content: "";
+    z-index: -1;
+    background: #00b9ff;
+    width: 123%;
+    height: 100%;
+    position: absolute;
+    top: -190px;
+    left: -122px;
+    transform: rotate(337deg);
+}
+
+.img-wrap {
+    width: 100px;
+    height: 100px;
+    border: 2px solid gray;
+    margin: 0 auto;
+    border-radius: 30px 0;
+}
+.title {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.cards:hover{
+    background: #00B9ff;
+    color: white;
+    margin: 10px;
+}
+.cards:hover .img-wrap{    
+    transform: rotate(90deg);
+}
+
+.click-btn {
+    font-size: 16px;
+    width: 100px;
+    height: 40px;
+    display: block;
+    margin: 10px auto 0;
+    color: #00b9ff;
+    text-decoration: none;
+    border: 1px solid #00b9ff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.cards:hover .click-btn {
+    color: white;
+    border-color: white;
+}
+
+@media screen and (max-width: 767px){
+    .card-container{flex-wrap: wrap;}
+    .cards{width: 100%;}
+}
